@@ -5,7 +5,6 @@ const Product = require('./Product');
 const Tag = require('./Tag');
 
 class ProductTag extends Model {}
-
 ProductTag.init(
   {
     id: {
