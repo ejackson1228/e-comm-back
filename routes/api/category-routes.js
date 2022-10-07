@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
       attributes: ['product_name', 'price', 'stock']
       }
     ]
-  }).then(dbCategoryData => res.json(dbCategoryData))
+  }).then(dbCategoryData => res.json(dbCategoryData)) // send all categories as a response
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -33,7 +33,7 @@ router.get('/:id', (req, res) => {
       }
     ]
   }).then(dbCategoryData => {
-    if (!dbCategoryData) {
+    if (!dbCategoryData) { // if the id doesn't exist...
       res.status(404).json({ message: 'No Category found with that ID!'});
       return;
     }
@@ -59,11 +59,11 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
   Category.update(
     {
-      category_name: req.body.category_name
+      category_name: req.body.category_name //update the object 
     },
     {
       where: {
-        id: req.params.id
+        id: req.params.id // take the id number from the url 
       }
     }
   ).then(dbCategoryData  => {
@@ -81,10 +81,10 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
   Category.destroy({
     where: {
-      id: req.params.id
+      id: req.params.id // delete the object with the same is as the number in the url
     }
   }).then(dbCategoryData => {
-    if(!dbCategoryData) {
+    if(!dbCategoryData) { //if the number from url doesn't exist as an id...
       res.status(404).json({ message: 'No Category found with this ID!'});
       return;
     }
