@@ -42,7 +42,7 @@ router.get('/:id', (req, res) => {
       {
         model: Tag,
         attributes: ['tag_name'],
-        as: 'tag'
+        as: 'tag_info'
       }
     ]
     }).then(dbProductData => {
