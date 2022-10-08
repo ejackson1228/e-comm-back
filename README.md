@@ -24,7 +24,7 @@ Link to Video Demo:
 3.Then, run | >node server | in the CL to populate your database with tables. <br>
     --- note: upon first setup, please ensure sequelize.sync force is true. --- <br>
 4.After the tables are populated run | npm run seed | to populate your tables with seeded data. <br>
-5.Once your tables are seeded, change seuelize.sync force to false. <br>
+5.Once your tables are seeded, change sequelize.sync force to false. <br>
 6.To start the server with a populated db, run | > node server | with sequelize.sync force set to false. <br>
 
 ## Usage
