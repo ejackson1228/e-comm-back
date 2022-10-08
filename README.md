@@ -5,8 +5,11 @@
 This project is the back-end side of an ecommerce application that allows the management of categories, products, and product tags using sequelize and Object Relational Mapping.
 
 ## Demo
-
-Link to Video Demo: 
+<br>
+<br> 
+Link to Video Demo: https://drive.google.com/file/d/1XZzvTXjL909Fa-dIvhq561VEYJPUnJ-V/view?usp=sharing
+<br>
+<br>
   
 ## Table of Contents
   - [Description](#description)
